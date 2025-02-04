@@ -1,0 +1,42 @@
+.status-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    width: 280px;
+    height: 100%;
+
+    padding-left: 10px;
+
+    text-align: left;
+
+    border: 1px solid #000000;
+    border-radius: 15px;
+
+    .qtd{
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+}
+
+.roxo {
+    background-color: rgb(198, 147, 245);
+
+    i {
+        background-color: rgb(181, 107, 249);
+        width: 12px;
+        padding: 4px;
+        border-radius: 10px;
+    }
+}
+
+.verde {
+    background-color: rgb(84, 210, 132);
+
+    i {
+        background-color: rgb(72, 179, 113);
+        width: 12px;
+        padding: 4px;
+        border-radius: 10px;
+    }
+}
