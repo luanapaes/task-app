@@ -1,0 +1,21 @@
+<div class="task-container">
+    <p class="date">{{ createAt }}</p>
+
+
+    <h1>{{ title }}</h1>
+
+    <p class="description">{{ description }}</p>
+
+    <div class="options">
+        @if (!status) {
+        <p class="pending">Pendente</p>
+        }@else {
+        <p class="done">Concluída</p>
+        }
+
+        <div class="buttons">
+            <button title="excluir"><i class="far fa-trash-alt"></i></button>
+            <button title="editar"><i class="far fa-edit"></i></button>
+        </div>
+    </div>
+</div>
