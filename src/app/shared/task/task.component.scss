@@ -1,29 +1,38 @@
 .task-container {
     width: 280px;
-    min-width: 31%;
-
-    max-height: 160px;
+    height: 140px;
     background-color: #fff;
-    padding: 8px;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.15) 0px 2px 3px;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-
-    h1 {
-        font-size: 1em;
-        margin-bottom: 0;
-    }
-
-    .description {
-        margin: 0;
-        color: #4d4d4d;
-        width: 300px;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px, rgba(0, 0, 0, 0.2) 0px 4px 6px;
     }
 
     .date {
-        margin: 0;
         font-size: 10px;
         text-align: end;
         color: #828282;
+    }
+
+    h1 {
+        font-size: 1.1em;
+        margin: 0;
+        color: #333;
+    }
+
+    .description {
+        margin: 4px 0;
+        color: #4d4d4d;
+        font-size: 0.9em;
+        word-break: break-word;
     }
 
     .options {
@@ -32,55 +41,24 @@
         justify-content: space-between;
         align-items: center;
 
+        .pending,
+        .done {
+            font-size: 0.85em;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 15px;
+            text-align: center;
+            width: fit-content;
+        }
+
         .pending {
-            color: rgb(193, 3, 3);
-            background-color: rgb(253, 171, 171);
-            width: 79px;
-            padding: 2px;
-            border-radius: 20px;
+            color: #d32f2f;
+            background-color: rgba(211, 47, 47, 0.15);
         }
 
         .done {
-            color: rgb(1, 109, 1);
-            background-color: rgb(211, 253, 211);
-            width: 85px;
-            padding: 2px;
-            border-radius: 20px;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: space-between;
-            width: 25%;
-
-            button {
-                background-color: transparent;
-                border: none;
-
-                i {
-                    font-size: 1.2em;
-                }
-
-                .fa-trash-alt {
-                    color: red;
-                    transition: color .2s ease-in;
-
-                    &:hover {
-                        color: rgb(248, 118, 118);
-                        cursor: pointer;
-                    }
-                }
-
-                .fa-edit {
-                    color: rgb(0, 0, 255);
-                    transition: color .2s ease-in;
-
-                    &:hover {
-                        color: rgb(99, 99, 254);
-                        cursor: pointer;
-                    }
-                }
-            }
+            color: #388e3c;
+            background-color: rgba(56, 142, 60, 0.15);
         }
     }
 }
