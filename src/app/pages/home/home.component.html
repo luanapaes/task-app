@@ -29,37 +29,15 @@
     <hr>
 
     <div class="tasks-container">
-        <app-task
-        title="Comprar fruta"
-        description="Comprar maçã, banana e abacate"
-        createAt="03/02/2025"
-        [status]="true"
-        ></app-task>
-
-        <app-task
-        title="Estudar Angular"
-        description="Interpolação de dados e componentes"
-        createAt="03/02/2025"
-        [status]="false"
-        ></app-task>
-        <app-task
-        title="Comprar fruta"
-        description="Comprar maçã, banana e abacate"
-        createAt="03/02/2025"
-        [status]="true"
-        ></app-task>
-
-        <app-task
-        title="Estudar Angular"
-        description="Interpolação de dados e componentes"
-        createAt="03/02/2025"
-        [status]="false"
-        ></app-task>
-        <app-task
-        title="Comprar fruta"
-        description="Comprar maçã, banana e abacate"
-        createAt="03/02/2025"
-        [status]="true"
-        ></app-task>
+        @for (task of tasks(); track task.id) {
+          <app-task
+          title={{task.title}}
+          description={{task.description}}
+          [status]="task.status"
+          createAt={{task.createAt}}
+          ></app-task>
+        }@empty {
+            <p>Loadindg..</p>
+        }
     </div>
 </div>
