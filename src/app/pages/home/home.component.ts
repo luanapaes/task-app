@@ -5,13 +5,14 @@ import { StatusCardComponent } from '../../shared/status-card/status-card.compon
 import { TaskComponent } from '../../shared/task/task.component';
 import { Task } from '../../shared/interfaces/task-interface';
 import { TaskService } from '../../shared/services/task.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [HeaderComponent, AddTaskButtonComponent,
-    StatusCardComponent, TaskComponent, CommonModule
+    StatusCardComponent, TaskComponent, CommonModule,
+    DatePipe
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
