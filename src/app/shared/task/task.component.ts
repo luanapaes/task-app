@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-task',
@@ -12,10 +13,4 @@ export class TaskComponent{
   @Input() description: string = '';
   @Input() createAt: string = '';
   @Input() status: boolean = true;
-
-  ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    console.log(this.status)
-  }
 }
