@@ -31,6 +31,8 @@
     <div class="tasks-container">
         @for (task of tasks(); track task.id) {
           <app-task
+          [taskInput]="task"
+          (taskSelected)="handleTaskSelected($event)"
           title={{task.title}}
           description={{task.description}}
           [status]="task.status"
