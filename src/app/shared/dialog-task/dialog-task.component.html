@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Sua tarefa</h2>
+<mat-dialog-content>
+    <mat-form-field [formGroup]="taskForm">
+        <mat-label>Título</mat-label>
+        <input matInput formControlName="title" />
+
+        <mat-label>Descrição</mat-label>
+        <input matInput formControlName="description" />
+
+        <!-- <mat-label>Status</mat-label>
+        <mat-slide-toggle formControlName="status">
+            Status: {{ taskForm.controls.status }}
+        </mat-slide-toggle> -->
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button [mat-dialog-close]="taskData" cdkFocusInitial>Ok</button>
+</mat-dialog-actions>
