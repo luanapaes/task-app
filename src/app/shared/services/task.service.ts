@@ -24,4 +24,16 @@ export class TaskService {
       shareReplay()
     );
   }
+
+  get(id:string): Observable<Task>{
+    const headers = {
+      'apikey': this.apiKey(),
+      'Authorization': `Bearer ${this.apiKey()}`
+    };
+
+    return this.httpClient.get<Task>(`${this.urlAPI()}?id=eq.${id}`, 
+      { headers }).pipe(
+        shareReplay()
+      )
+  }
 }
